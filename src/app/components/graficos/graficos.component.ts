@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-graficos',
@@ -7,24 +7,7 @@ import { Component } from '@angular/core';
 })
 export class GraficosComponent {
 
-  results: any[] = [
-    {
-      name: 'Juego1',
-      value: 20
-    },
-    {
-      name: 'Juego2',
-      value: 25
-    },
-    {
-      name: 'Juego3',
-      value: 30
-    },
-    {
-      name: 'Juego4',
-      value: 35
-    },
-  ];
+  @Input() results: any[] = [];
 
   // options
   showXAxis = true;
@@ -39,9 +22,9 @@ export class GraficosComponent {
   colorScheme = 'nightLights';
 
   constructor() {
-    const newResults = [...this.results];
-    console.log(newResults)
-    console.log('mi logica')
+    // const newResults = [...this.results];
+    // console.log(newResults)
+    // console.log('mi logica')
   }
 
   onSelect(event) {
